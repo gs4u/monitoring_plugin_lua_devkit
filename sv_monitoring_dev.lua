@@ -67,5 +67,5 @@ end
 
 function GS4u_HashCode_SHA1(Data, Token, JSON)
 	if not (JSON) then return sha1(util.TableToJSON(Data)..Token)
-	else return sha1(Data) end
+	else return sha1(Data..Token) end
 end
